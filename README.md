@@ -1,4 +1,4 @@
-Spring Boot Elastic Beanstalk deploy with Docker
+Elastic Beanstalk - Docker and Spring Boot
 ========================
 Deploying Springboot Application to AWS Elastic Beanstalk from a Docker Container
 
