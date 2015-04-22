@@ -5,4 +5,4 @@ WORKDIR /opt/application/
 
 EXPOSE 80
 
-CMD ["java", "-jar", "application.jar", "--server.port=80"]
+CMD ["sh", "-c", "java ${JVM_PROPS} -jar application.jar --server.port=80"]
