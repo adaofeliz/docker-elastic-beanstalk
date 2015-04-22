@@ -17,10 +17,9 @@ cd target
 docker build -t elastic-beanstalk-docker .
 ```
 
-* Deploy to Docker Container
+* Run Docker Image
 ```sh
-docker images
-docker run -p 8080:80 <image id>
+docker run -p 8080:80 elastic-beanstalk-docker
 ```
 
 Try it
