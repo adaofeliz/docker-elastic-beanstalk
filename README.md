@@ -6,20 +6,20 @@ Installation
 --------------
 * Clone this project
 ```sh
-git clone https://github.com/adaofeliz/elastic-beanstalk-docker.git elastic-beanstalk-docker
+git clone https://github.com/adaofeliz/docker-springboot-ebs.git docker-springboot-ebs
 ```
 
 * Build Application
 ```sh
-cd elastic-beanstalk-docker
+cd docker-springboot-ebs
 mvn clean install
 cd target
-docker build -t elastic-beanstalk-docker .
+docker build -t docker-springboot-ebs .
 ```
 
 * Run Docker Image
 ```sh
-docker run -p 8080:80 elastic-beanstalk-docker
+docker run -p 8080:80 docker-springboot-ebs
 ```
 
 Try it
