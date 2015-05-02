@@ -25,10 +25,16 @@
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                  <classifier>-runnable</classifier>
+                  <outputDirectory>${basedir}/target/ebs_deploy/dist/</outputDirectory>
+                </configuration>
             </plugin>
+
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
@@ -39,17 +45,17 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/target/</outputDirectory>
+                            <outputDirectory>${basedir}/target/ebs_deploy/dist/</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>docker</directory>
-                                    <filtering>true</filtering>
+                                    <directory>ebs_deploy</directory>
                                 </resource>
                             </resources>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
@@ -63,12 +69,13 @@
                         </goals>
                         <configuration>
                             <target>
-                                <zip destfile="${basedir}/target/${project.artifactId}.zip" basedir="${basedir}/target" includes="Dockerfile, Dockerrun.aws.json, ${project.artifactId}.jar"/>
+                                <zip destfile="${basedir}/target/ebs_deploy/${project.artifactId}.zip" basedir="${basedir}/target/ebs_deploy/dist" includes="Dockerfile, Dockerrun.aws.json, ${project.artifactId}-runnable.jar"/>
                             </target>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 
