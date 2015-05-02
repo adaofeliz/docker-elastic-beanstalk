@@ -32,7 +32,7 @@ eb open
 ```sh
 cd docker-springboot-ebs
 mvn clean install
-ls cd target/ebs_deploy/ # Use *.zip
+# Use target/ebs_deploy/ *.zip
 ```
 
 Try it
