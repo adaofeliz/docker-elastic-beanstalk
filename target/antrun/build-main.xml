@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<project name="maven-antrun-" default="main"  >
-<target name="main">
-  <zip basedir="/Users/adaofeliz/projects/docker/docker-springboot-ebs/target/ebs_deploy/dist" destfile="/Users/adaofeliz/projects/docker/docker-springboot-ebs/target/ebs_deploy/elastic-beanstalk-docker.zip" includes="Dockerfile, Dockerrun.aws.json, elastic-beanstalk-docker-runnable.jar"/>
-</target>
-</project>

@@ -32,7 +32,7 @@ eb open
 ```sh
 cd docker-springboot-ebs
 mvn clean install
-# Use target/ebs_deploy/ *.zip
+# Use docker-springboot-ebs/target/ebs_deploy/elastic-beanstalk-docker.zip
 ```
 
 Try it
